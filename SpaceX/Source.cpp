@@ -15,6 +15,12 @@ int main()
 		slSprite(bg, wWidth / 2, wHeight / 2, 800, 1024);
 		spaceship.update();
 		spaceship.draw();
+		
+		// kontrol dengan cara klik 
+		if(slGetMouseButton(0))
+		{
+			spaceship.move_to(slGetMouseX(), 150);
+		}
 		slRender();
 	}
 
